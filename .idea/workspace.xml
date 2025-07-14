@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AIAssistantCustomInstructionsStorage">
+    <option name="instructions">
+      <map>
+        <entry key="AIAssistant.VCS.GenerateCommitMessage">
+          <value>
+            <AIAssistantStoredInstruction>
+              <option name="actionId" value="AIAssistant.VCS.GenerateCommitMessage" />
+              <option name="content" value="Analyze the following code changes and create a concise and clear commit message in Korean.&#10;&#10;Rules:&#10;1. First line: Brief summary within 50 characters (in Korean)&#10;2. Use present tense verbs (추가, 수정, 업데이트, 삭제, 리팩토링 등)&#10;3. Start with lowercase&#10;4. No period at the end&#10;5. Include what and why when possible&#10;&#10;Format:&#10;&lt;type&gt;: &lt;subject&gt;&#10;&#10;&lt;optional body&gt;&#10;&#10;Type classification:&#10;- feat: 새로운 기능 추가 (new feature)&#10;- fix: 버그 수정 (bug fix)&#10;- docs: 문서 변경 (documentation)&#10;- style: 코드 포맷팅, 세미콜론 누락 등 (formatting, missing semicolons, etc.)&#10;- refactor: 코드 리팩토링 (code refactoring)&#10;- test: 테스트 코드 추가/수정 (adding/modifying test code)&#10;- chore: 빌드 과정, 보조 도구 변경 (build process, auxiliary tools)&#10;&#10;Please generate an appropriate commit message in Korean based on the code changes." />
+            </AIAssistantStoredInstruction>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="46529e95-1064-4c28-a819-b5fa21354313" name="Changes" comment="chore: README.md 파일 삭제" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "seob717"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/seob717/template.git",
+    "accountId": "69ab4c7a-6df7-4e24-a5be-88bc012793dd"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2zrqLudySQEDOFksU8IYiWEvmgS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="46529e95-1064-4c28-a819-b5fa21354313" name="Changes" comment="" />
+      <created>1752499486226</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1752499486226</updated>
+      <workItem from="1752499487341" duration="798000" />
+    </task>
+    <task id="LOCAL-00001" summary="chore: .idea 및 .vscode 디렉토리 무시 설정 추가&#10;&#10;.idea와 .vscode 디렉토리를 .gitignore에 추가하여 불필요한 파일이 버전에 포함되지 않도록 설정.">
+      <option name="closed" value="true" />
+      <created>1752499820340</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752499820340</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore: README.md 파일 삭제">
+      <option name="closed" value="true" />
+      <created>1752500284890</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752500284890</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update .gitignore to exclude IDE-specific directories (.idea, .vscode) and remove related files." />
+    <MESSAGE value="chore: .idea 및 .vscode 디렉토리 무시 설정 추가&#10;&#10;.idea와 .vscode 디렉토리를 .gitignore에 추가하여 불필요한 파일이 버전에 포함되지 않도록 설정." />
+    <MESSAGE value="chore: README.md 파일 삭제" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: README.md 파일 삭제" />
+  </component>
+</project>
