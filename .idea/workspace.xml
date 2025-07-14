@@ -18,7 +18,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46529e95-1064-4c28-a819-b5fa21354313" name="Changes" comment="chore: 프로젝트 구성 파일 추가&#10;&#10;apps 및 packages 디렉토리에 구성 파일과 의존성 추가를 통해 프로젝트 환경 설정 완료." />
+    <list default="true" id="46529e95-1064-4c28-a819-b5fa21354313" name="Changes" comment="feat: Button 컴포넌트 추가&#10;&#10;Button 컴포넌트를 구현하여 UI 구성 요소로 활용 가능하게 함. Radix UI와 class-variance-authority를 사용하여 다양한 스타일과 크기 옵션 제공.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/docs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/docs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/web/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,21 +34,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "seob717"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;seob717&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/seob717/template.git",
-    "accountId": "69ab4c7a-6df7-4e24-a5be-88bc012793dd"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/seob717/template.git&quot;,
+    &quot;accountId&quot;: &quot;69ab4c7a-6df7-4e24-a5be-88bc012793dd&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2zrqLudySQEDOFksU8IYiWEvmgS" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -51,22 +57,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/yuseobshim/WebstormProjects/template/apps/docs/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -81,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752499486226</updated>
-      <workItem from="1752499487341" duration="1258000" />
+      <workItem from="1752499487341" duration="1698000" />
     </task>
     <task id="LOCAL-00001" summary="chore: .idea 및 .vscode 디렉토리 무시 설정 추가&#10;&#10;.idea와 .vscode 디렉토리를 .gitignore에 추가하여 불필요한 파일이 버전에 포함되지 않도록 설정.">
       <option name="closed" value="true" />
@@ -107,7 +114,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752500744728</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: Button 컴포넌트 추가&#10;&#10;Button 컴포넌트를 구현하여 UI 구성 요소로 활용 가능하게 함. Radix UI와 class-variance-authority를 사용하여 다양한 스타일과 크기 옵션 제공.">
+      <option name="closed" value="true" />
+      <created>1752500797298</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752500797298</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +156,7 @@
     <MESSAGE value="chore: .idea 및 .vscode 디렉토리 무시 설정 추가&#10;&#10;.idea와 .vscode 디렉토리를 .gitignore에 추가하여 불필요한 파일이 버전에 포함되지 않도록 설정." />
     <MESSAGE value="chore: README.md 파일 삭제" />
     <MESSAGE value="chore: 프로젝트 구성 파일 추가&#10;&#10;apps 및 packages 디렉토리에 구성 파일과 의존성 추가를 통해 프로젝트 환경 설정 완료." />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: 프로젝트 구성 파일 추가&#10;&#10;apps 및 packages 디렉토리에 구성 파일과 의존성 추가를 통해 프로젝트 환경 설정 완료." />
+    <MESSAGE value="feat: Button 컴포넌트 추가&#10;&#10;Button 컴포넌트를 구현하여 UI 구성 요소로 활용 가능하게 함. Radix UI와 class-variance-authority를 사용하여 다양한 스타일과 크기 옵션 제공." />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Button 컴포넌트 추가&#10;&#10;Button 컴포넌트를 구현하여 UI 구성 요소로 활용 가능하게 함. Radix UI와 class-variance-authority를 사용하여 다양한 스타일과 크기 옵션 제공." />
   </component>
 </project>
