@@ -157,7 +157,7 @@ export default function RootLayout({
   );
 }
 `,
-  'app/page.tsx': `import { Button } from "@repo/ui/components/button";
+  'app/page.tsx': `import { Button } from "@repo/ui";
 
 export default function Home() {
   return (
