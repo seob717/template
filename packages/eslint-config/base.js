@@ -3,6 +3,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import turboPlugin from "eslint-plugin-turbo";
 import tseslint from "typescript-eslint";
 import onlyWarn from "eslint-plugin-only-warn";
+import unicorn from "eslint-plugin-unicorn";
 
 /**
  * A shared ESLint configuration for the repository.
@@ -13,6 +14,7 @@ export const config = [
   js.configs.recommended,
   eslintConfigPrettier,
   ...tseslint.configs.recommended,
+  unicorn.configs["flat/recommended"],
   {
     plugins: {
       turbo: turboPlugin,
@@ -24,6 +26,19 @@ export const config = [
   {
     plugins: {
       onlyWarn,
+    },
+  },
+  {
+    rules: {
+      "unicorn/numeric-separators-style": [
+        "error",
+        {
+          number: {
+            minimumDigits: 4,
+            groupLength: 3,
+          },
+        },
+      ],
     },
   },
   {

@@ -12,6 +12,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "eslint-plugin-unicorn": "^59.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.0",
@@ -24,9 +25,13 @@
     "node": ">=18"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "turbo run lint",
-      "turbo run check-types"
+    "apps/web/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter web run lint",
+      "pnpm --filter web run check-types"
+    ],
+    "packages/ui/**/*.{js,jsx,ts,tsx}": [
+      "pnpm --filter @repo/ui run lint",
+      "pnpm --filter @repo/ui run check-types"
     ],
     "*.{js,jsx,ts,tsx,md,json}": [
       "prettier --write"
