@@ -1,58 +1,246 @@
-# Turborepo Tailwind CSS starter
+# Template Monorepo
 
-This Turborepo starter is maintained by the Turborepo core team.
+> A modern monorepo template built with Turborepo, Next.js, and Tailwind CSS
 
-## Using this example
+## 🚀 Quick Start
 
-Run the following command:
+### Prerequisites
 
-```sh
-npx create-turbo@latest -e with-tailwind
+- Node.js 18+ 
+- pnpm 8+
+
+### Installation
+
+```bash
+git clone <repository-url>
+cd template
+pnpm install
 ```
 
-## What's inside?
+### Development
 
-This Turborepo includes the following packages/apps:
+```bash
+# Start all apps in development mode
+pnpm dev
 
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `web`: another [Next.js](https://nextjs.org/) app with [Tailwind CSS](https://tailwindcss.com/)
-- `ui`: a stub React component library with [Tailwind CSS](https://tailwindcss.com/) shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Building packages/ui
-
-This example is set up to produce compiled styles for `ui` components into the `dist` directory. The component `.tsx` files are consumed by the Next.js apps directly using `transpilePackages` in `next.config.ts`. This was chosen for several reasons:
-
-- Make sharing one `tailwind.config.ts` to apps and packages as easy as possible.
-- Make package compilation simple by only depending on the Next.js Compiler and `tailwindcss`.
-- Ensure Tailwind classes do not overwrite each other. The `ui` package uses a `ui-` prefix for it's classes.
-- Maintain clear package export boundaries.
-
-Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update the `tailwind.config.ts` in your apps to be aware of your package locations, so it can find all usages of the `tailwindcss` class names for CSS compilation.
-
-For example, in [tailwind.config.ts](packages/tailwind-config/tailwind.config.ts):
-
-```js
-  content: [
-    // app content
-    `src/**/*.{js,ts,jsx,tsx}`,
-    // include packages if not transpiling
-    "../../packages/ui/*.{js,ts,jsx,tsx}",
-  ],
+# Start specific app
+pnpm --filter web dev
+pnpm --filter docs dev
 ```
 
-If you choose this strategy, you can remove the `tailwindcss` and `autoprefixer` dependencies from the `ui` package.
+## 📦 Project Structure
 
-### Utilities
+```
+template/
+├── apps/
+│   ├── web/              # Main web application
+│   └── docs/             # Documentation site
+├── packages/
+│   ├── ui/               # Shared UI components
+│   ├── eslint-config/    # ESLint configurations
+│   ├── tailwind-config/  # Tailwind CSS configurations
+│   └── typescript-config/ # TypeScript configurations
+├── cli/                  # CLI tools
+├── create-app.js         # App generation script
+└── turbo.json           # Turborepo configuration
+```
 
-This Turborepo has some additional tools already setup for you:
+## 🛠️ Creating New Apps
 
-- [Tailwind CSS](https://tailwindcss.com/) for styles
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+Use the built-in app generator to create new applications:
+
+```bash
+# Create a web app
+pnpm init:app my-web-app
+
+# Create a docs app
+pnpm init:app my-docs-app
+```
+
+The script automatically determines app type based on the name:
+- Contains `-docs` → Documentation app
+- Default → Web app
+
+### What gets generated:
+
+- ✅ Complete Next.js setup with TypeScript
+- ✅ Pre-configured Tailwind CSS
+- ✅ ESLint and TypeScript configs
+- ✅ Shared UI components integration
+- ✅ Turborepo optimization
+
+## 🎨 UI Components
+
+The `@repo/ui` package provides shared components:
+
+```tsx
+import { Button } from "@repo/ui/components/button";
+
+export default function MyPage() {
+  return <Button>Click me</Button>;
+}
+```
+
+Available components:
+- `Button` - Customizable button component
+- `Card` - Card layout component
+- More components can be added in `packages/ui/src/components/`
+
+## 🔧 Available Scripts
+
+### Root Commands
+
+```bash
+pnpm dev          # Start all apps in development
+pnpm build        # Build all apps
+pnpm lint         # Lint all packages
+pnpm check-types  # Type check all packages
+pnpm format       # Format code with Prettier
+pnpm init:app     # Create new app
+```
+
+### App-specific Commands
+
+```bash
+pnpm --filter <app-name> <command>
+
+# Examples:
+pnpm --filter web dev
+pnpm --filter docs build
+pnpm --filter ui check-types
+```
+
+## 🏗️ Architecture
+
+### Turborepo Benefits
+
+- **Incremental builds** - Only rebuild what changed
+- **Remote caching** - Share build artifacts across team
+- **Parallel execution** - Run tasks across packages simultaneously
+- **Dependency-aware** - Respect package dependencies
+
+### Package Dependencies
+
+```mermaid
+graph TD
+    A[apps/web] --> B[packages/ui]
+    C[apps/docs] --> B
+    B --> D[packages/eslint-config]
+    B --> E[packages/tailwind-config]
+    B --> F[packages/typescript-config]
+    A --> D
+    A --> E
+    A --> F
+    C --> D
+    C --> E
+    C --> F
+```
+
+## 🎯 Configuration
+
+### ESLint
+
+Shared ESLint configurations in `packages/eslint-config/`:
+- `base.js` - Base TypeScript rules
+- `nextjs.js` - Next.js specific rules
+- `react.js` - React specific rules
+
+### Tailwind CSS
+
+Centralized Tailwind configuration in `packages/tailwind-config/`:
+- Shared design tokens
+- Custom color palette
+- Responsive breakpoints
+
+### TypeScript
+
+Shared TypeScript configurations in `packages/typescript-config/`:
+- `base.json` - Base TypeScript settings
+- `nextjs.json` - Next.js specific settings
+- `react-library.json` - React library settings
+
+## 🚀 Deployment
+
+### Build for Production
+
+```bash
+pnpm build
+```
+
+### Deploy Individual Apps
+
+Each app in `apps/` can be deployed independently:
+
+```bash
+# Build specific app
+pnpm --filter web build
+
+# Deploy to your platform
+cd apps/web
+# Follow your deployment platform's instructions
+```
+
+## 🔄 Adding New Packages
+
+1. Create new package directory:
+```bash
+mkdir packages/my-package
+cd packages/my-package
+```
+
+2. Initialize package:
+```bash
+pnpm init
+```
+
+3. Update `package.json`:
+```json
+{
+  "name": "@repo/my-package",
+  "private": true,
+  "exports": {
+    ".": "./dist/index.js"
+  }
+}
+```
+
+4. Add to workspace dependencies where needed
+
+## 🧪 Testing
+
+Add testing framework of your choice:
+
+```bash
+# Example with Jest
+pnpm add -D jest @types/jest
+
+# Example with Vitest
+pnpm add -D vitest @vitejs/plugin-react
+```
+
+## 📝 Development Workflow
+
+1. **Start development**: `pnpm dev`
+2. **Make changes** in any package
+3. **Hot reload** automatically updates affected apps
+4. **Type checking** runs in background
+5. **Lint and format** before committing
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run `pnpm lint` and `pnpm check-types`
+5. Submit a pull request
+
+## 📄 License
+
+MIT License - feel free to use this template for your projects!
+
+## 🔗 Links
+
+- [Turborepo Documentation](https://turborepo.org/docs)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [TypeScript Documentation](https://www.typescriptlang.org/docs)
